@@ -9,7 +9,7 @@ This document describes the process for proposing, documenting, and implementing
 The following process is the process for reviewing a proposal, reaching
 a decision about whether to accept or decline the proposal, designing, developing, testing and released with xuperchain version. 
 
-![]()
+![](https://github.com/xuperchain/XIP/blob/master/pictures/process.png)
 
 ### Proposal Collecting
 #### 【Goal】
