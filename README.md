@@ -11,7 +11,7 @@ a decision about whether to accept or decline the proposal, designing, developin
 
 ![]()
 
-### 1 Proposal Collecting
+### Proposal Collecting
 #### 【Goal】
 Make xuperchain more perfect and meet the needs of more community developers. This stage will be continuously open to the whole community, and all valuable needs are welcome to put forward.
 
@@ -27,7 +27,7 @@ The proposal of the community is maintained by the of issue. [XuperChain Feature
 #### 【Output】
  There will be many feature issues in the issue area, which will be reviewed by the issue open source working group and discussed under issue, and managed by [Proposals Project](https://github.com/xuperchain/xuperchain/projects/2).
 
-### 2 Proposal Publishing
+### Proposal Publishing
 #### 【Goal】
 The received proposal will be included in the management plan. These proposals will be published and community developers will be recruited to claim. After claiming, follow-up work can be carried out.
 
@@ -40,7 +40,7 @@ XuperChain Working Group Meeting.
 #### 【Output】
 XuperChain Working Group will publish requirement document.
 
-### 3 Designing 
+### Designing 
 #### 【Goal】
 For the requirement document, the owner of the requirement needs to design.
 
@@ -53,7 +53,7 @@ After community developers claim the requirements, they need to carry out detail
 #### 【Output】
 Design document.
 
-### 4 Developing
+### Developing
 #### 【Goal】
 Complete development.
 
@@ -81,7 +81,7 @@ The code submitted needs to meet the following specifications, which are also th
 **Review Specification**
 The PR can not be merged unless two Member Approved.
 
-### 5 Testing
+### Testing
 #### 【Goal】
 Guarantee project quality.
 
@@ -91,5 +91,5 @@ XuperChain Working Group.
 #### 【Output】
 Publish testing report.
 
-### 6 Release
+### Release
 The community and the internal use the same version for maintenance. The whole version takes about **5 weeks** from the proposal published to complete the test. 
