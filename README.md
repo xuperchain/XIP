@@ -96,7 +96,6 @@ Publish testing report.
 ### Release
 The community and the internal use the same version for maintenance. The whole version takes about **5 weeks** from the proposal published to complete the test. 
 
-=====
 
 # 中文
 
@@ -106,7 +105,7 @@ XuperChain Improvement Proposals (XIPs) 描述了外部用户或者开发者向X
 本文档描述了XuperChain改进提案的提出、讨论、设计到实现的全流程。
 
 ## 流程全景图
-![图片]()
+![图片](https://github.com/qizheng09/XIP/blob/master/pictures/process_cn.png)
 
 ## 迭代过程
 ###  提案收集
@@ -150,7 +149,7 @@ XIP 仓库下新增该提案的详细设计文档。
 - **提案Owner**：开发需求
 - **XuperChain开源工作组**：对开发者提交的PR进行Review
 
-#### 【开发规范】
+#### 【开发规范】
 **分支策略：**
 XuperChain的开发采取**主干开发，分支发布**的方式，完成一个迭代周期后，新建一个分支。
 
