@@ -1,7 +1,8 @@
-# XuperChain Improvement Proposals(XIPs)
-
 [中文](#中文-1)
 -----
+# XuperChain Improvement Proposals(XIPs)
+
+
 ## Introduction
 XuperChain Improvement Proposals (XIPs) describe standards for the XuperChain platform which external developer participated in, including libraries, tools, protocols, client APIs, and contract standards. This changes need to be first discussed, and sometimes formally documented, before they can be implemented.
 
@@ -98,6 +99,8 @@ The community and the internal use the same version for maintenance. The whole v
 
 
 # 中文
+
+# XuperChain Improvement Proposals(XIPs)
 
 ## 介绍
 XuperChain Improvement Proposals (XIPs) 描述了外部用户或者开发者向XuperChain提出建议和参与工作组工作的流程规范，包括库、工具、协议、客户端API和合约标准等。这些提案在接收之前，会首先进行讨论, 接收后还需要提供相应的详细需求文档和设计文档，然后会进入开发阶段。
