@@ -1,8 +1,6 @@
-[This is a template for XuperChain's change proposal process, documented [here](../README.md).]
+# Proposal: [Local private key protection]
 
-# Proposal: [Title]
-
-Author(s): [Author Name, Co-Author Name]
+Author(s): gjj
 
 Last updated: [Date]
 
