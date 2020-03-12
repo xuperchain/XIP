@@ -33,8 +33,7 @@ Modify the source code in a small range, and use the new method and new command 
 
 3.Three RPC interfaces are developed,which are unlocking、locking and obtaining plaintext private key from memory
 
-4.
-(1)The unlocking interface has three parameters: keypath、 passcode and expiredtime. 
+4.(1)The unlocking interface has three parameters: keypath、 passcode and expiredtime. 
 
 (2)Read the address corresponding to the keypath from the local disk. 
 
