@@ -4,7 +4,6 @@ Author(s): gjj
 
 Last updated: 2020-03-12
 
-Discussion at https://github.com/xuperchain/xuperchain/pull/NNN.
 
 ## Abstract
 
@@ -12,19 +11,19 @@ Solve private key protection by locking and unlocking account
 
 ## Background
 
-at present the private key of local account is plaintext on disk. it is not safe for production environments.
+The current private key is stored in plaintext on the local disk, and anyone can use the private key for transaction, which is not safe in the production environment
 
 ## Proposal
 
-[A precise statement of the proposed change.]
+The overall transaction signature process of xuperchain will change, similar to the identity authentication before using the system
 
 ## Rationale
 
-[A discussion of alternate approaches and the trade offs, advantages, and disadvantages of the specified approach.]
+AES symmetric encryption, account unlocking, account locking
 
 ## Compatibility
 
-[A discussion of the change with regard to the compatibility guidelines]
+Modify the source code in a small range, and use the new method and new command mark method to protect the private key. If you do not use the new method and new command, you can use the original API to complete the whole normal process of xuperchain
 
 ## Implementation
 
@@ -34,30 +33,31 @@ at present the private key of local account is plaintext on disk. it is not safe
 
 3.Three RPC interfaces are developed,which are unlocking、locking and obtaining plaintext private key from memory
 
-4.（1）The unlocking interface has three parameters: keypath、 passcode and expiredtime. 
+4.
+(1)The unlocking interface has three parameters: keypath、 passcode and expiredtime. 
 
-（2）Read the address corresponding to the keypath from the local disk. 
+(2)Read the address corresponding to the keypath from the local disk. 
 
-（3）The address and passcode obtained are spliced with a salt value to get a string. 
+(3)The address and passcode obtained are spliced with a salt value to get a string. 
 
-（4）Hash the string to get the final string. 
+(4)Hash the string to get the final string. 
 
-（5）The final string is the key value corresponding to the plaintext private key stored in memory.
+(5)The final string is the key value corresponding to the plaintext private key stored in memory.
 
-（6）Read the ciphertext private key in keypath, use passcode for AES decryption to get the plaintext private key, and save it in memory together with the key obtained above
+(6)Read the ciphertext private key in keypath, use passcode for AES decryption to get the plaintext private key, and save it in memory together with the key obtained above
 
-（7）At the same time, set the sliding window for the kV saved in the memory, and delete the kV in case of timeout
+(7)At the same time, set the sliding window for the kV saved in the memory, and delete the kV in case of timeout
 
-（8）When the unlocking method is called again, if the clear text private key of the keypath still exists in memory, the time window will be reset
-
-
-5. Only keypath and passcode are needed to lock the interface. The purpose is to clear the plaintext private key saved in the memory of the account
+(8)When the unlocking method is called again, if the clear text private key of the keypath still exists in memory, the time window will be reset
 
 
-6. Only keypath and passcode are needed to obtain the plaintext private key interface. The purpose is to obtain the plaintext private key saved in the memory of the account
+5.Only keypath and passcode are needed to lock the interface. The purpose is to clear the plaintext private key saved in the memory of the account
 
 
-7. Two commands are provided: lock command "./xchain-cli account lock" and unlock command "./xchain-cli account unlock"
+6.Only keypath and passcode are needed to obtain the plaintext private key interface. The purpose is to obtain the plaintext private key saved in the memory of the account
+
+
+7.Two commands are provided: lock command "./xchain-cli account lock" and unlock command "./xchain-cli account unlock"
 "./xchain-cli account lock --keyPath data/keys --passcode fjd9c8bj3kvidj3n" --> call the lock interface
 "./xchain-cli account unlock --keyPath data/keys --passcode fjd9c8bj3kvidj3n --expiredTime 5" --> call the unlock interface
 
